@@ -1,0 +1,627 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="927.2,10127.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabf="clr-namespace:UiPath.Mail.Activities.Business.ForEachMail;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Business.ForEachMail</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="937.6,10022.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_Address" />
+      <Variable x:TypeArguments="x:String" Name="previousYear">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">2022</Literal>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="outputTable" />
+      <Variable x:TypeArguments="x:String" Name="parcelId" />
+      <Variable x:TypeArguments="x:Boolean" Name="multipleResults" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <umab:OutlookApplicationCard Account="{x:Null}" AccountMismatchBehavior="UseDefaultEmailAccount" DisplayName="Use Desktop Outlook App" sap:VirtualizedContainerService.HintSize="875.2,890.4" sap2010:WorkflowViewState.IdRef="OutlookApplicationCard_1">
+      <umab:OutlookApplicationCard.Body>
+        <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Outlook" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,709.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <umab:ForEachEmailX DisplayName="For Each Email" sap:VirtualizedContainerService.HintSize="529.6,597.6" sap2010:WorkflowViewState.IdRef="ForEachEmailX_1" IncludeSubfolders="False" Mails="[Outlook.Folder(&quot;Inbox&quot;)]" NumberOfEmailsLimit="1" UnreadOnly="False" WithAttachmentsOnly="False">
+              <umab:ForEachEmailX.Body>
+                <ActivityAction x:TypeArguments="snm:MailMessage, x:Int32">
+                  <ActivityAction.Argument1>
+                    <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentMail" />
+                  </ActivityAction.Argument1>
+                  <ActivityAction.Argument2>
+                    <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                  </ActivityAction.Argument2>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,341.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:SaveMailAttachmentsX Attachments="{x:Null}" DisplayName="Save Email Attachments" ExcludeInlineAttachments="True" FolderPath="Data" sap:VirtualizedContainerService.HintSize="433.6,229.6" sap2010:WorkflowViewState.IdRef="SaveMailAttachmentsX_1" Message="[CurrentMail]" OverwriteExisting="True" />
+                  </Sequence>
+                </ActivityAction>
+              </umab:ForEachEmailX.Body>
+              <umab:ForEachEmailX.MailFilter>
+                <umabf:MailFilterArgument LogicalOperator="And">
+                  <umabf:MailFilterArgument.Filters>
+                    <scg:List x:TypeArguments="umabf:SingleMailFilterArgument" Capacity="1">
+                      <umabf:SingleMailFilterArgument DateEqualsFilter="{x:Null}" Criteria="Subject" DateFilter="SevenDays" Operator="Contains" Value="Test Address" />
+                    </scg:List>
+                  </umabf:MailFilterArgument.Filters>
+                </umabf:MailFilterArgument>
+              </umab:ForEachEmailX.MailFilter>
+            </umab:ForEachEmailX>
+          </Sequence>
+        </ActivityAction>
+      </umab:OutlookApplicationCard.Body>
+    </umab:OutlookApplicationCard>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="875.2,509.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Data\Addresses.xlsx">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_Address]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Column B" DataTable="[dt_Address]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="387.2,188" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:BuildDataTable DataTable="[outputTable]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="875.2,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Address&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Parcel_x0020_Id&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Location_x0020_Address&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Owner_x0020_Information&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Building_x0020_Value&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;extraFeaturesValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LandValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;marketValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Parcel_x0020_Id_x0020__x0028_Tax_x0029_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;year&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;GrossAmount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;paidAmount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Address]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="875.2,8330.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="841.6,8142.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="currentAddress" />
+              <Variable x:TypeArguments="x:String" Name="Location_Address" />
+              <Variable x:TypeArguments="x:String" Name="o" />
+              <Variable x:TypeArguments="x:String" Name="locationAddress" />
+              <Variable x:TypeArguments="x:String" Name="ownerInformation" />
+              <Variable x:TypeArguments="s:String[]" Name="Years" />
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="d" />
+              <Variable x:TypeArguments="x:String" Name="currentYear" />
+              <Variable x:TypeArguments="x:String" Name="currentBuildingValue" />
+              <Variable x:TypeArguments="x:String" Name="extraFeaturesValue" />
+              <Variable x:TypeArguments="x:String" Name="landValue" />
+              <Variable x:TypeArguments="x:String" Name="marketValue" />
+              <Variable x:TypeArguments="x:String" Name="currentExtraFeaturesValue" />
+              <Variable x:TypeArguments="x:String" Name="currentLandValue" />
+              <Variable x:TypeArguments="x:String" Name="currentMarketValue" />
+              <Variable x:TypeArguments="x:String" Name="prev" />
+              <Variable x:TypeArguments="x:String" Name="prevBuildingValue" />
+              <Variable x:TypeArguments="x:String" Name="preExtraFeaturesValue" />
+              <Variable x:TypeArguments="x:String" Name="preLandValue" />
+              <Variable x:TypeArguments="x:String" Name="preMarketValue" />
+              <Variable x:TypeArguments="x:String" Name="realEstateID" />
+              <Variable x:TypeArguments="x:String" Name="extractedID" />
+              <Variable x:TypeArguments="x:String" Name="_34779_057_010" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="798.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[currentAddress]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Address").ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: qPublic.net - Bay County, FL - Search" sap:VirtualizedContainerService.HintSize="798.4,7007.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="a0cb6fc9-2a19-4b32-9896-0f780d287fad" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="764.8,6790.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search by'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="702.4,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" Text="[currentAddress]" Version="V3">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=2&amp;PageID=6823" CvElementArea="272, 605, 1071, 41" CvTextArea="290, 618, 93, 13" CvTextArgument="enter address..." CvType="InputBox" DesignTimeRectangle="276, 663, 1063, 36" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT ctlBodyPane_ctl02…'" FullSelectorArgument="&lt;webctrl aria-label='Search, enter Road Name, autocomplete top 10 options are availab*' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search, enter Road Name, autocomplete top 10 options are availab*' tag='INPUT' type='text' class='form-control tt-upm-address-search tt-input' aaname='enter address...' /&gt;" Guid="c83d2a2a-0aa2-498b-90f3-f06d6529d5dc" ImageBase64="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" InformativeScreenshot="8e81490f6bf7e10d9bba15caf4521e6d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Search' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Exact address match?" CvType="Text" DesignTimeRectangle="248, 571, 275, 27" ElementType="Text" FriendlyName="'Search by'" FullSelectorArgument="&lt;webctrl aaname='Search by Location Address' aria-role='heading' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search by Location Address' aria-role='heading' tag='DIV' type='' class='title' check:innerText='Search by Location Address' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARcAAAAfCAYAAADN94kNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQdSURBVHhe7ZpPTuswEMZ7xkpcBSGxqyohseECsEJlwZIFR0gX7BArxAoW5QoP+vCbcexk/Dfpg9QJ/X5i2sYeTzyO56tBzBQAAAwAxAUAMAgQFwDAIEBcAACDAHEBAAwCxAUAMAjFxeXp6Uk9PDx0GvsBAKZDMXF5f39X5+fn6vT0VJ2dnXUa+7E/jwMAjJ9i4nJ1daWur6/Vdrs1LXnYj/15HABg/BQTl5OTE/X8/Gyu+sH+PA4AMH6Kicvx8bF6eXkxV/1gfx4HABg/v1xcNmp1NFOzWWjLtXEZgGqxVJX5/B02N3M1O1pRFnGqBeWy+Ik7laRSy5455NfDe9aZdQP74SDEZX6zz21GxTKDuPRmveydQ249uK/9wijx3IEPxOWneVupOcSlNzrHHzm5uOwSFwzDQYuLLk5HCMzR2m5g/lZN/irFJ5S2T29kz9+NbcjF1MJk++ibeOEVkzN2Sf30bgrIFlOdE1kzzp2nsxapuWTzJqyACj/20XOw42RhJ+I1c7Umxrh99TpacVnJPnkfi1nHYN5grxz8yUV++7vfdt6vN86JpC5Yt1Bp07/Re/bksktMT+iCgjGiIeceFFQ8Zu1T90n/as2xUu0CM5dmrfxrJwZ/TuXsr3mNfiZSVMl7RTkEOQZrQmghm9fPAhTlIP+g64qNKYQbd9OHsJ/ZtHoDJ3y94snjxXQKyhSeaUsWoRQXb3wspm7TY+q8Q+FNtQt0jrKAzRo2RZ4TdZEzEeblx2oJcwzvw2sSGwv2D/7mwmixSBdaK0x1UUQL2dIpLv1jyjYpJJYucdFtzr2MNX5SfOWcU+2GncUlnjOj5yjzCmK3hDn2fL6gCBAXWxj65CI2dbSAzPX/nlwyMZPi8A1xiZ5cEkTHE9H2XcQlt46Eju/k5cdqCecCcRkzxcTl4uJC3d/fm6t+sD+P60/35uMCtf3O5vULUwuKLYq6AGTc5n9bcuKSi6nHyaKq7+HMRxap8c+KS7RQN2qjY2xUtW692yJPtQt2EZfsOsbja9H0xnDsMEf/+UJsxkQxcXl8fNSnkMvLS3V7e9tp7Mf+PK4/9WZrj+OtLamAdF9ks9Zt3tjFiq4jxd30k6Do4pLjZAEyHTF14dl+jucWpi4u20/tlSjMsPAsRqQam1Px0Zg3apdzsYKYapfsIi5dOct1bObvjaE5LNdVD3ExufpiCIpQTFyY19dXdXd3FxUT39iP/QEA06CouAAAfi8QFwDAIIxGXL6+YDDYb7JRiEtsYjAYbNpWRFxiE6Gf0OgFBoNN0/YmLsHNuU0at0nz+2Ew2KRscHFJioa4/ksv1rb0Ys22wWCw6dmg4hIIimjjm0sR0Z/53dgnXcNgsOnaYOISCIv5TPcMBKWejFIfdPHB7+bzHxgMNlH7Uv8AQvRtELzqYRYAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=2&amp;PageID=6823" CvElementArea="1336, 662, 90, 39" CvTextArea="1372, 676, 39, 12" CvTextArgument="Search" CvType="Button" DesignTimeRectangle="1337, 661, 91, 41" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Search'" Guid="44ba30a4-995e-4456-908b-80abb6efa951" InformativeScreenshot="8a78115db2d4e51e17f5d922b4f714c8.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Search' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvElementArea="271, 662, 1075, 40" CvTextArea="290, 675, 93, 15" CvTextArgument="enter address..." CvType="InputBox" DesignTimeRectangle="272, 662, 1075, 40" ElementType="InputBox" FriendlyName="'INPUT ctlBodyPane_ctl02…'" FullSelectorArgument="&lt;webctrl aria-label='Search, enter Road Name, autocomplete top 10 options are availab*' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-label='Search, enter Road Name, autocomplete top 10 options are availab*' tag='INPUT' type='text' class='form-control tt-upm-address-search tt-input' aaname='enter address...' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:UiElementExists DisplayName="Element Exists 'INPUT  ctlBodyPane_ctl0...'" Exists="[multipleResults]" sap:VirtualizedContainerService.HintSize="702.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                      <ui:UiElementExists.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="de678fc3-efcf-4336-8b0e-cbdd46fdc9d5" InformativeScreenshot="0db339d4b075a1b5eed74e0a6ad7323d" Selector="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Results' /&gt;&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;header&amp;gt;a&amp;gt;span' isleaf='1' tag='SPAN' /&gt;&lt;nav up='1' /&gt;&lt;webctrl aria-role='heading' tag='DIV' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:UiElementExists.Target>
+                    </ui:UiElementExists>
+                    <If Condition="[multipleResults]" sap:VirtualizedContainerService.HintSize="702.4,1222.4" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="668.8,1039.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="625.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Object">[CurrentRow("Column B")]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Object">["Multiple results found"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="625.6,763.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+                            <ueab:ExcelProcessScopeX.Body>
+                              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,676.8" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,564.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" UseTemplate="True" WorkbookPath="Data\Addresses.xlsx">
+                                    <ueab:ExcelApplicationCard.Body>
+                                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                        </ActivityAction.Argument>
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dt_Address]" />
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ueab:ExcelApplicationCard.Body>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ueab:ExcelApplicationCard>
+                                </Sequence>
+                              </ActivityAction>
+                            </ueab:ExcelProcessScopeX.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ueab:ExcelProcessScopeX>
+                          <ui:Continue sap:VirtualizedContainerService.HintSize="625.6,24.8" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_12" />
+                      </If.Else>
+                    </If>
+                    <uix:NGetText DisplayName="Get Text 'Parcel ID'" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[parcelId]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="489, 340, 97, 17" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'34779-057-010'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='' /&gt;" Guid="d3588a91-43c8-4de5-a41c-ff1a29cde878" InformativeScreenshot="c4daecdfcd2ddd4a777df8b4fe33da8f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Parcel ID" CvType="Text" DesignTimeRectangle="276, 339, 213, 20" ElementType="Text" FriendlyName="'Parcel ID'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Parcel ID         ' check:innerText='Parcel ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAAYCAYAAAB3ClhnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALzSURBVHhe7Zm/a9tAGIb9Z2g1ZDFkaLZo7RZBhxgy1JDBZBIaTYcSugSRIWgKHk2GgjwE1KHgDgF3KchDQR4KylCQhwwaMmjI4KHD2+8k2Rat67TG54TyPnBg333f+Ybv4X64BkKIVigZIZqhZIRohpIRohlKRohmKBkhmqFkhGimIlkIt1ZDrdp2TJycBYgfypCtUa7lyEda9sxI+818bc1+OXLno1lds2pGAy/bLoJvWRFDyFMh9blEslMMsgxZGmN45cBUfQc9JGXUdlhDssMeYrXuLEU8CuAd1SXOQKu/3ZUTMmdWm+VXYSaZK58WhO9U3x68cdmxFdaQ7LfYFIFtSKyF3veyi5AtktfqWfi4ZNG5KlQD7lf5ch+ia1toGCquDtOW3aM8SuYTGnJEu3Fh7cj4Cw+RGpAcr22iruaWY5z1xi9zpoj7HVi7xfyNVx0EE9Wv2IRkwtjDnowZ5/lKCHkSVkqWjXtoKaH2XURTILl20LS7CMYJklE3H9u7KAp4VvzGcRfD21SObZLwEOL0hcp30BtJzliOcbaHUK5KSb8FQx3nLoeIbyP4b00RU35b0jYm2aoxQrbE6ocPafWD6g5TJYV/tCjgovib8Cux2Ucnn+P0S9kxJ4Kn5GsHmD9NZAM4Etu5UZZRMvL/8OeHD9V+fVXMYgRnJzDVcTCPXRTwXLK7IlSxrK9gudCqFfJsSDIeF8kz4NE72QLZffZl/EDuXZ8jJCJc73BR3MuEmu1kxe5UpdzJ7ADpTOiyTX+o8U1IlsA/5sMHeSqKk56q07+XbDpER8YN20c8iRF+cGGp+9oKyfAgOfmdrnInazv58TO9VncyE87VANEkQfTJh2u7GN6rxDUk4xM+eW6M3NyJf9jJ1MPHSfGyaDTQuggRvZcJVkmmmAzgvm6IUJKn/tyWvOIeNkUsorby10WRd9eCczkbW0OyauOf0eS5oEQrPxJCNEHJCNEMJSNEM5SMEM1QMkI0Q8kI0QwlI0QrwE8kZeY8xBBkEwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Location Address'" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[locationAddress]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" DesignTimeRectangle="489, 358, 462, 39" DesignTimeScaleFactor="1.25" FriendlyName="'123 TONYA'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='                                        ' /&gt;" Guid="61cf9380-999e-45bb-8be3-ddfeab2b3597" InformativeScreenshot="81d6fd42e130fb7e4b4420a86b9a8c25.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Location Address" CvType="Text" DesignTimeRectangle="276, 358, 213, 39" ElementType="Text" FriendlyName="'Location Address'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname='Location Address         ' check:innerText='Location Address' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANkAAAArCAYAAAD15C1kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAU7SURBVHhe7Zq9SyNbGIfnz5hWsBG22HSmvMIWDlhswGIDW0iqIFsFCwnbyGAh4RaSSgaLC0khjF1usRAbYSwWxuJCLISxsEiRIoVFii1+9z1zTiaTmBjZ67kS+D0wkDln5nzxPnM+1AEhxCqUjBDLUDJCLEPJCLEMJSPEMpSMEMtQMkIsk5Msgu84cHZb6JuUd+ExRGXdxdZJjJFJemtGV3W4qq8fG4hN2kIeWyjJs6X2glG58eFIvn9j7gmZ4Z0lG6JTnQngewlq18Ha98iSZCN0D6SfriuiuahfLamFkpH/RP+9JYvhi1ALA9gGA5kppZ/eeQfBJ+nvXiiqvwAlI7+NccrcCS9LNrprobazoZdZ7ga8gxZ6TyZTmMpfL6JyEungHURoVj1siEyOs4ZiNdDv9TvY/+CmATq+0kA2Qe0cReptYYReuwbPPOt+8FBr97JZLjqSZ/cCdE4rKK7Lb2lb+XTxUjM596ScCsLB+HcJrUeTmTJEdFLW7ZWyKt9r2Bq3TfHUQ+vAw5pq47oH/7CStmssWdqerwG65xVdRrWTjkN+fNI+XCb6BWF43UBlc830r4zGtdZ+UTpZER77qUuvk+yhhbIEjPu1ie5dgt5V09yH+lnJV2K4Oz46aX6AmkiY/JJAvthHqdpEeJsgudHvFWS/peQZ/hPoWeKsh+FwiKEyY0aypF1Ol3Xl0y56Dz10T839hW5lGtRy7x2HiO96CA+L6f38mSVG4+Mk8Cez2iTgkzMlnqnvLkZ47KViaMnUUlPJXkS9HUt+F8E3Vd+MZHJfPGwhfpA+qQ/K1Pj1ELfrKDoFeUc6PJSPjRoTGS/V/ugyQPOHtGdROlk5XiVZ/GdBAke++A8mQUjOtiStgMbt/Pz59NHazdUxbyk2JZmR4rMIq3OFRC/zzKGFDmpfWm8wws9d3snSbnofZvZn2QHInPrybVSBr9om+8WMmeWibk990h5Bj4+ePTV6L+ocdDEyZRaqItMgN/8uSicrx6skexbIQr9dyoJrXn7GUGaXI7OUU+Xn61gqmWlTtnRUGFFNfc/qnldmigh1OL08nVxj8ebUly9vXtlzJZseC5025zLjMLssbN5qqRalk9XiDWeyLQT3JjNDZoZNKXPbR3gVIxHhgs+5OpZK9hsz2SLJzNKwcCx7RbU0za4u6rIs0wcg+iBmagzy5fVDlOW3m5fwFZLp8dlH+JivV67cnjZlEKOpPiCun/YtY1E6WQmeS/apLkJ00c0u2S8t25PdB/BU8OX3ZHsNRIMuaipdljxqPxVd+vDyQWyC1tltoCMS9mUPNy2ZKPWqPdlyyfQhh/4ozBIdqRlOLefGs91kz9Xc0zOJLk8E35b6XJlVZFx6ty3U/9Cz40uSqb/9qfEqfgvQUXvT2w5aR/vwf8jO8ClCY6+GQMpL7jrwVfnbAZJF6aZIsjo8l+zZpQNm2eni8GeA/e3x0mZyAphcmFM2dep3EiH+S5aZ2UwxQnxayk7q6n9L6oxk6pmlp4tLJTMz4uaCPz7/9NM2eGcSwk8ya3zR/VzbrKD5UwJc2p+V99BBLe2ni42dGsJr+QDJsy9KJozuQvim3HT8qk35CEnGU345LWV+UR+nF9LJSpFuq8xvQoglKBkhlqFkhFiGkhFiGUpGiGUoGSGWoWSEWIaSEWIZSkaIZSgZIZahZITYYvwvguaWEPLWpJLxfxcJsQclI8QylIwQy1AyQizDgw9CLMOZjBDLUDJCLEPJCLEMJSPk/4GSEWIZSkaIZSgZIZahZIRYhpIRYhXgX2RJX0nyW61mAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Owner Information'" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[ownerInformation]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" DesignTimeRectangle="270, 662, 291, 98" DesignTimeScaleFactor="1.25" FriendlyName="'Primary Owner'" FullSelectorArgument="&lt;webctrl class='four-column-blocks' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='four-column-blocks' tag='DIV' type='' aaname='                                                                                                                          ' /&gt;" Guid="04269dec-4a1e-45f7-9367-dd65419a0fb3" InformativeScreenshot="36ae9b4e1e7475b93936ff0353dd298d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="BOwner Information" CvType="Text" DesignTimeRectangle="248, 620, 195, 27" ElementType="Text" FriendlyName="'Owner Information'" FullSelectorArgument="&lt;webctrl aaname='Owner Information' aria-role='heading' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Owner Information' aria-role='heading' tag='DIV' type='' class='title' check:innerText='Owner Information' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <Assign sap:VirtualizedContainerService.HintSize="702.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_7">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[ownerInformation]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[ownerInformation.Trim.Replace("(\n)+\s*|(\s)+","\1\2").Replace("[\\t]", "")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="702.4,132" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[currentYear]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.DateTime.Now.Year.ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:String">[previousYear]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:String">[System.DateTime.Now.AddYears(-1).Year.ToString]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="702.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;current Year :  &quot;+currentYear +&quot;\n&quot; +&quot;Previous Year : &quot;+previousYear]" />
+                    <uix:NGetText DisplayName="Get Text Building Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[currentBuildingValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="920, 602, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$195,209'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' colName='*{0}*' /&gt;&quot;, currentYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, currentYear)]" Guid="c62ba7f0-01d1-4ee3-98d0-3d3e433d4625" ImageBase64="" InformativeScreenshot="99b8b62fbd236621f0aa1687b4a8294f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text Extra Features Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[currentExtraFeaturesValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="909, 527, 173, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$1,060'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' colName='*{0}*' /&gt;&quot;, currentYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, currentYear)]" Guid="1b081a7a-d6ac-4e7d-bd6f-28d14f5dc5d2" InformativeScreenshot="f857aac13e0a9449911b7a7dc75d763b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text Land Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[currentLandValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="909, 553, 173, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$62,252'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' colName='*{0}*' /&gt;&quot;, currentYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, currentYear)]" Guid="32f1112e-1455-4615-9c47-f84bc09f7070" ImageBase64="" InformativeScreenshot="b40a87d4da4f622cf13079ee79a1f86f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text Market Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[currentMarketValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="920, 707, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$258,521'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='TD' colName='*{0}*' /&gt;&quot;, currentYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, currentYear)]" Guid="12fbdf78-96cb-4b2e-93c0-c9f9c0dcc024" InformativeScreenshot="4cc895b858fe04b7886741487dd097e1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text Prev Building Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[prevBuildingValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=233246439&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="1058, 602, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$195,209'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' colName='*{0}*' /&gt;&quot;, previousYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, previousYear)]" Guid="3a79e7aa-44fd-44da-8636-e713ca406d3a" ImageBase64="" InformativeScreenshot="2ba9d5b6c02bb06b00d657af23839a13.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text prev Extra Features Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[preExtraFeaturesValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="1058, 623, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$1,060'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' colName='*{0}*' /&gt;&quot;, previousYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, previousYear)]" Guid="81adfa60-0860-4d6a-8156-fd0249b824fd" ImageBase64="" InformativeScreenshot="4942d2e7d1eed7c6b8e5dc8a8e076306.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text prev Land Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[preLandValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="1058, 644, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$58,550'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' colName='*{0}*' /&gt;&quot;, previousYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, previousYear)]" Guid="15f68b26-f20c-45f4-854e-13cd50fc7d3e" ImageBase64="" InformativeScreenshot="31840e4a64d814e984c34b3f0f14acd3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text prev Market Value" sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[preMarketValue]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=4&amp;PageID=6825&amp;Q=1207211048&amp;KeyValue=34779-057-010" CvType="AnyWordGroup" DesignTimeRectangle="1058, 707, 138, 21" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'$186,376'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl tableRow='7' tag='TD' colName='*{0}*' /&gt;&quot;, previousYear)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname='Valuation' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' colName='*{0}*' class='value-column' /&gt;&quot;, previousYear)]" Guid="3d413ede-4b89-4032-9399-431fd0e133d4" ImageBase64="" InformativeScreenshot="6fe79e8fdc8f52904be70d48c3898d9c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Report: 34779-057-010' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGoToUrl DisplayName="Go To Tax Collector Website" sap:VirtualizedContainerService.HintSize="702.4,82.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[&quot;https://bay.county-taxes.com/public/real_estate/parcels/&quot;+parcelId+&quot;/bills&quot;]" Version="V3" />
+                    <uix:NGetText DisplayName="Get Text Id " sap:VirtualizedContainerService.HintSize="702.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[realEstateID]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://bay.county-taxes.com/public/real_estate/parcels/34779-057-010/bills" DesignTimeRectangle="363, 337, 1194, 31" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Real Estate'" FullSelectorArgument="&lt;webctrl isleaf='1' tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='H1' type='' class='col col-md' /&gt;" Guid="673ea1e2-fd9c-48e1-976c-33f753f89abb" InformativeScreenshot="de2bc57d84806fd77a921f7b2d3197fa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Account Summary — - TaxSys - Bay County Tax Collector Tax Collector' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target CvTextArgument="Search" CvType="Text" DesignTimeRectangle="363, 301, 46, 21" ElementType="Text" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aaname=' Search ' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Search ' tag='DIV' type='' class='col link-text' check:innerText='Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMlSURBVFhH7VXPSyJhGO7PmGvHjh27euzY0esePXaIkCBCYlmGhUgIQmIPepCQDjIgQ7OClSLSYFQisimCMZahYj+sZHj2/b75pmayTWqXcsMHBub9fs33vO/zvDOGT4IRkWHDiMiwYUTkXXB3Bj1/AuNOxC/ATcS8RDmbgxzN8CeUNdAyxdxH4FzHzJyKyLmIX4CDSBvKehxSQINfOURMScG3TLGsoyxWvDveRKSag2dOQ6wtYgaqkHFxLYIPwJuIFHYhPSXSh3sY+xl4F+IYm4tjajULvWNrz0S3XkRwLYGJeZqfV+DdLDmk2YASUhEqNZHeVPkaf/7emrooQl5VME5nSgsJzG5X0WXjNpFfVUQ2Enx+fDkFpd6v90ciZg2hr0xaSYSOGmLQDeOnCmmJDjqlKvXa0OMUk/QMPnsNLaohmK3B6LTROj3E7GIcvj07Mw1E5DhmZBXerROUO020mInPD+AlUtPRIo2xfZQMRSSAE1Ew+S2JSKmBVqeGyAolafUALX7mI9xmv6kiFlZFZlQEdqqPGTVLCFCW5aIzGxXIi5SxugifQI/SR8MlEVlEpI1jK9scJtLh5y/GYVfEeX4+RWrYRVqENtxEbFDb07Y0eChT0gqZnd2deygBn+ho1pOCl7IeOLK2Mem1qkVEtlL4spzAlJ8u+VAxUZFtZ7VJBdRQ3GMOPOeRo91XELFRZwfRRQv0XspgkjwU3C9Cy7ufAlcPeWCddC5noFQb6PZIitvqACKsov+aiEnG6/MQyYmIzOZugc4hfFSRYKVvkQVONIW0Y3owEWr5a1T1B/k9weuJ3EOPUVegbGp1ujSDeYuySmae16DwjN+S5hWSWg4Fu1PRGqPetN45kSQUe+7iGP7AIGkBXeqWU2ToQP7SGqCWX9ivWJ55U0V6DWiiLbLWyh5pQUOo4viPmE1oYasNTgQUvnb6x7F1UfOMS4u1Xc8SzX3PIr1DxhxAhDaivJfkfhwjT7GzPaEDlHlH+xuPUJZbrA1eico8h941X8N84Ab9S65o7434P7wG9nfv/iDdAXjZ7P8RRkSGDSMiw4ZPQgT4De73jPnug2ZuAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <Assign sap:VirtualizedContainerService.HintSize="702.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[extractedID]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[realEstateID.Split("#"c).Last]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <If Condition="[parcelId &lt;&gt; extractedID]" sap:VirtualizedContainerService.HintSize="702.4,1715.2" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="377.6,342.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{currentAddress,parcelId,locationAddress,ownerInformation,currentBuildingValue,currentExtraFeaturesValue,currentLandValue,currentMarketValue, extractedID ,&quot;&quot; ,&quot;&quot; ,&quot;&quot; ,&quot;&quot; ,&quot;&quot;  }]" DataTable="[outputTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="334.4,188" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                          <ui:Return sap:VirtualizedContainerService.HintSize="334.4,24.8" sap2010:WorkflowViewState.IdRef="Return_1" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="476.8,1189.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="combinedTaxesAndAssessments" />
+                            <Variable x:TypeArguments="x:String" Name="paidAmount" />
+                            <Variable x:TypeArguments="x:String" Name="paymentStatus" />
+                            <Variable x:TypeArguments="x:String" Name="extracted" />
+                            <Variable x:TypeArguments="x:String" Name="extractedCombinedTaxesAndAssessments" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="10" DisplayName="Click '2022 Annual bill'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bay.county-taxes.com/public/real_estate/parcels/34779-057-010/bills" DesignTimeRectangle="227, 470, 124, 22" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'2022 Annual bill'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='' aaname='2022{0} Annual bill' check:innerText='2022 Annual Bill' /&gt;&quot;, previousYear)]" Guid="4db7bb06-bc58-4e4a-9b34-0a75214af78b" ImageBase64="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" InformativeScreenshot="8ed854f9ab136067bb13e215b033dc29.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Account Summary — - TaxSys - Bay County Tax Collector Tax Collector' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <uix:NGetText DisplayName="Get Text 'Combined taxes'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[combinedTaxesAndAssessments]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bay.county-taxes.com/public/real_estate/parcels/34779-057-010/bills/1587703?parcel=4b5f6ba0-e366-11eb-a80f-00505681a2b7" DesignTimeRectangle="194, 821, 1530, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Combined taxes'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div' idx='15' isleaf='1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='col-12 message' isleaf='1' tag='DIV' /&gt;" Guid="e96d0dbd-acd6-4d0d-82a5-d02e0cd6eabc" InformativeScreenshot="359c03dd5f4075a39fb2853387953d75.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TaxSys - Bay County Tax Collector Tax Collector' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text 'Please pay'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[paidAmount]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bay.county-taxes.com/public/real_estate/parcels/34779-057-010/bills/1587703?parcel=4b5f6ba0-e366-11eb-a80f-00505681a2b7" DesignTimeRectangle="462, 764, 248, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$2,076.42'" FullSelectorArgument="&lt;webctrl aaname=' $2,076.42 ' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='' class='col-6 col-md-2 order-md-8' /&gt;" Guid="516d3986-ce33-4b59-bdb7-dbdf205345ff" InformativeScreenshot="0147622294eb9469f02ee901b52afa41.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TaxSys - Bay County Tax Collector Tax Collector' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="213, 764, 248, 26" ElementType="Text" FriendlyName="'Please pay'" FullSelectorArgument="&lt;webctrl aaname=' Please pay: ' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Please pay: ' tag='DIV' type='' class='col-6 col-md-2 order-md-7 header' check:innerText='Please pay:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText DisplayName="Get Text 'paid'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="a0cb6fc9-2a19-4b32-9896-0f780d287fad" TextString="[paymentStatus]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://bay.county-taxes.com/public/real_estate/parcels/34779-057-010/bills/1587703?parcel=4b5f6ba0-e366-11eb-a80f-00505681a2b7" DesignTimeRectangle="1609, 628, 46, 28" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'paid'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SPAN' class='emphasized-status' /&gt;" Guid="3255ef82-58b1-4a2b-acd4-9bc7b8da41f5" InformativeScreenshot="b6e5e74117bfe27507e76831bf6fdfc4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='TaxSys - Bay County Tax Collector Tax Collector' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[extractedCombinedTaxesAndAssessments]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[combinedTaxesAndAssessments.Split(":"c).Last]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{currentAddress,parcelId,locationAddress,ownerInformation,currentBuildingValue,currentExtraFeaturesValue,currentLandValue,currentMarketValue,parcelId , previousYear,extractedCombinedTaxesAndAssessments,paidAmount,paymentStatus}]" DataTable="[outputTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="433.6,188" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="22b2ac596ab2a95fd0883dba8b533dd9.jpg" Selector="&lt;html app='chrome.exe' title='qPublic.net - Bay County, FL - Search' /&gt;" Title="qPublic.net - Bay County, FL - Search" Url="https://qpublic.schneidercorp.com/Application.aspx?AppID=834&amp;LayerID=15170&amp;PageTypeID=2&amp;PageID=6823" />
+              </uix:NApplicationCard.TargetApp>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NApplicationCard>
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="798.4,763.2" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,676.8" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="529.6,564.8" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" UseTemplate="True" WorkbookPath="[parcelId]">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,272" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[outputTable]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+            <ui:ClearDataTable DataTable="[outputTable]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="798.4,80.8" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
